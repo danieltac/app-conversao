@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titulo2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="8dp"
+        android:text="Dólar em Real"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/subHeader2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:text="1 dólar = 5 reais"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputDolar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo2" />
+
+    <EditText
+        android:id="@+id/inputDolar"
+        android:layout_width="283dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="Digite aqui o valor em dólares"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/convertToReal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subHeader2"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/reais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reais"
+        android:textSize="34sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/valueReal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/valueReal" />
+
+    <TextView
+        android:id="@+id/valueReal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="43dp"
+        android:text="0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/realToDolar"
+        app:layout_constraintEnd_toStartOf="@+id/reais"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convertToReal" />
+
+    <Button
+        android:id="@+id/convertToReal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="39dp"
+        android:text="Converter"
+        app:layout_constraintBottom_toTopOf="@+id/valueReal"
+        app:layout_constraintEnd_toEndOf="@+id/reais"
+        app:layout_constraintTop_toBottomOf="@+id/inputDolar" />
+
+    <ImageButton
+        android:id="@+id/realToDolar"
+        android:layout_width="67dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="194dp"
+        android:background="#00FFFFFF"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        android:tint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valueReal"
+        app:srcCompat="@android:drawable/stat_notify_sync" />
+</androidx.constraintlayout.widget.ConstraintLayout>
